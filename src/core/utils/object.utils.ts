@@ -24,16 +24,16 @@ export class ObjectUtils {
   }
 
   public static serializeToJson (target: any, k1: string, k2: string) {
-    let json = {};
+    const json = {};
     if (StringUtils.isNotEmpty(target)) {
       if (target.indexOf(k1) > -1) {
         target = target.split(k1);
-        $.each(target, function (i, e) {
+        for (let e of target) {
           if (e.indexOf(k2) > -1) {
             let ae = e.split(k2);
             json[ae[0]] = ae[1];
           }
-        });
+        }
       } else {
         if (target.indexOf(k2) > -1) {
           let ae = target.split(k2);

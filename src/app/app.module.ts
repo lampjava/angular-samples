@@ -4,18 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
-// Material Modules
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {
-  MdButtonModule,
-  MdCardModule,
-  MdMenuModule,
-  MdToolbarModule,
-  MdIconModule,
-  MdRadioModule,
-  MdSidenavModule
-} from '@angular/material';
-
 // Default Components
 import { AppComponent } from './app.component';
 import { GnbComponent } from './components/gnb/gnb.component';
@@ -36,15 +24,7 @@ import { PageNotFoundComponent } from './views/error/notfound.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MdButtonModule,
-    MdCardModule,
-    MdMenuModule,
-    MdToolbarModule,
-    MdIconModule,
-    MdRadioModule,
-    MdSidenavModule
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,

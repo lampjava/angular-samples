@@ -1,13 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-// service components
 import { MainComponent } from './views/main/main.component';
-
-// guide components
 import { GuideComponent } from './views/guide/guide.component';
-
-// error components
 import { PageNotFoundComponent } from './views/error/notfound.component';
 
 const routes: Routes = [
@@ -16,7 +11,8 @@ const routes: Routes = [
   { path: 'guide', component: GuideComponent },
 // { path: 'detail/:id', component: HeroDetailComponent },
 // { path: 'heroes',     component: HeroesComponent },
-  { path: '**', component: PageNotFoundComponent }
+  { path: 'not-found', component: PageNotFoundComponent },
+  { path: '**', redirectTo: '/not-found', pathMatch: 'full' }
 ];
 
 @NgModule({

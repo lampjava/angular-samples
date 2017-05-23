@@ -1,10 +1,10 @@
-<header>
+<header [hidden]="isHideHeader">
   <app-gnb></app-gnb>
 </header>
 <section>
-  <app-sidenav></app-sidenav>
+  <app-sidenav [hidden]="ishideSideNav"></app-sidenav>
   <router-outlet></router-outlet>
 </section>
-<footer>
+<footer [hidden]="isHideFooter">
   <app-footer></app-footer>
 </footer>

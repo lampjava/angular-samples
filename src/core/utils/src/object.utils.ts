@@ -28,15 +28,15 @@ export class ObjectUtils {
     if (StringUtils.isNotEmpty(target)) {
       if (target.indexOf(k1) > -1) {
         target = target.split(k1);
-        for (let e of target) {
+        for (const e of target) {
           if (e.indexOf(k2) > -1) {
-            let ae = e.split(k2);
+            const ae = e.split(k2);
             json[ae[0]] = ae[1];
           }
         }
       } else {
         if (target.indexOf(k2) > -1) {
-          let ae = target.split(k2);
+          const ae = target.split(k2);
           json[ae[0]] = ae[1];
         }
       }
@@ -46,7 +46,7 @@ export class ObjectUtils {
 
   public static compareJson (oriJson: any, targetJson: any) {
     // 비교 결과 JSON (다른 것 또는 oriJson에 없는 targetJson의 값이 들어감)
-    let rJson = {};
+    const rJson = {};
 
     // oriJson과 값이 다른 targetJson값
     $.each(oriJson, function(k, v) {
@@ -74,9 +74,9 @@ export class ObjectUtils {
   }
 
   public static getDocumentInfo (key?: string) {
-    let doc = document;
-    let loc = doc.location;
-    let info = {
+    const doc = document;
+    const loc = doc.location;
+    const info = {
       href : loc.href,
       host : loc.host,
       hash : loc.hash,

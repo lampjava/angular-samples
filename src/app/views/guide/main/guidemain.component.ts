@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-guide',
-  templateUrl: './guide.component.html'
+  templateUrl: './guidemain.component.html'
 })
-export class GuideComponent {
+export class GuideMainComponent {
 }

@@ -1,5 +1,6 @@
 // @See org.springframework.http.HttpStatus.class
 export class HttpStatus {
+
   public static CONTINUE = 100;
 
   public static SWITCHING_PROTOCOLS = 101;
@@ -119,4 +120,5 @@ export class HttpStatus {
   public static NOT_EXTENDED = 510;
 
   public static NETWORK_AUTHENTICATION_REQUIRED = 511;
+
 }

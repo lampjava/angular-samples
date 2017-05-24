@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AppConstants } from '../core/constants/app.constants';
-import { StringUtils } from '../core/utils/string.utils';
-import { ObjectUtils } from '../core/utils/object.utils';
+import { AppConstants } from '../core/constants';
+import { StringUtils, ObjectUtils } from '../core/utils';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +14,7 @@ export class AppComponent implements  OnInit {
   ishideAside: boolean;
 
   ngOnInit () {
-    let params = ObjectUtils.getDocumentInfo('querystringJSON');
+    const params = ObjectUtils.getDocumentInfo('querystringJSON');
 
     // Page Layout 설정
     this.isHideHeader = StringUtils.toBoolean(params[AppConstants.parameter['hideHeader']]);

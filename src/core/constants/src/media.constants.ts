@@ -28,4 +28,5 @@ export class MediaType {
   public static TEXT_PLAIN_VALUE = 'text/plain';
 
   public static TEXT_XML_VALUE = 'text/xml';
+
 }

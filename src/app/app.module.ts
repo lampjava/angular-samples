@@ -4,27 +4,29 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
+// Bootstrap
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 // Default Components
 import { AppComponent } from './app.component';
-import { GnbComponent } from './components/gnb/gnb.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { SideNavComponent } from './components/sidenav/sidenav.component';
+import {
+ GnbComponent,
+ FooterComponent,
+ SideNavComponent
+} from './components';
 
-// Service Components
-import { MainComponent } from './views/main/main.component';
-
-// Guide Components
-import { GuideComponent } from './views/guide/guide.component';
-
-// Error Components
-import { PageNotFoundComponent } from './views/error/notfound.component';
+// Components
+import { MainComponent } from './views';
+import { GuideMainComponent } from './views/guide';
+import { PageNotFoundComponent } from './views/error';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   declarations: [
     AppComponent,
@@ -32,10 +34,15 @@ import { PageNotFoundComponent } from './views/error/notfound.component';
     FooterComponent,
     SideNavComponent,
     MainComponent,
-    GuideComponent,
+    GuideMainComponent,
     PageNotFoundComponent
   ],
   providers: [ ],
-  bootstrap: [ AppComponent, GnbComponent, FooterComponent, SideNavComponent ]
+  bootstrap: [
+    AppComponent,
+    GnbComponent,
+    FooterComponent,
+    SideNavComponent
+  ]
 })
 export class AppModule { }

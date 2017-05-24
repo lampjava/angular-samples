@@ -1,7 +1,7 @@
 export class AppConstants {
 
   // App Name
-  public static appName: string = 'LightSaber';
+  public static appName = 'LightSaber';
 
   // Define Parameter Names
   public static parameter: object = {

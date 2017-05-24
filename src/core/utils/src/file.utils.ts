@@ -18,8 +18,8 @@ export class FileUtils {
   }
 
   public static getFileInfo (filename: string) {
-    let lastIndex = filename.lastIndexOf('.');
-    let len = filename.length;
+    const lastIndex = filename.lastIndexOf('.');
+    const len = filename.length;
     let ext = null;
     let name = filename;
     if (lastIndex > -1) {

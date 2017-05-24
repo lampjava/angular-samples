@@ -19,7 +19,7 @@ export class StringUtils {
     return str;
   }
 
-  public static toBoolean(str: string) {
+  public static toBoolean (str: string) {
     return str === 'true';
   }
 

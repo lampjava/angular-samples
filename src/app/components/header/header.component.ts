@@ -1,25 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
+import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+declare const $: any;
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styles: ['./header.component.scss']
+  styles: [ './header.component.css' ]
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private translate: TranslateService) { }
+  constructor(public router: Router, private translate: TranslateService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    $('.main.menu').visibility({
+      type: 'fixed'
+    });
 
-  toggleSidebar() {
-    const dom: any = document.querySelector('body');
-    dom.classList.toggle('push-right');
-  }
-
-  rltAndLtr() {
-    const dom: any = document.querySelector('body');
-    dom.classList.toggle('rtl');
+    // show dropdown on hover
+    $('.main.menu  .ui.dropdown').dropdown({
+      on: 'hover'
+    });
   }
 
   onLoggedout() {

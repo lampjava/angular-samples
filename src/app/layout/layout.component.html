@@ -1,12 +1,3 @@
-<header [hidden]="isHideHeader">
-  <app-header></app-header>
-</header>
-<aside [hidden]="isHideSideBar">
-  <app-sidebar></app-sidebar>
-</aside>
-<section class="main-container">
-    <router-outlet></router-outlet>
-</section>
-<footer [hidden]="isHideFooter">
-  <app-footer></app-footer>
-</footer>
+<app-header [hidden]="isHideHeader"></app-header>
+<router-outlet></router-outlet>
+<app-footer [hidden]="isHideFooter"></app-footer>

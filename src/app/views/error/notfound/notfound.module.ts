@@ -9,6 +9,6 @@ import { NotFoundRoutingModule } from './notfound-routing.module';
         NotFoundRoutingModule,
         RouterModule
     ],
-    declarations: [NotFoundComponent]
+    declarations: [ NotFoundComponent ]
 })
 export class NotFoundModule {}

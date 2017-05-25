@@ -1,8 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
-  templateUrl: './footer.component.html'
+  templateUrl: './footer.component.html',
+  styles: [ './footer.component.css' ]
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit {
+
+  constructor(public router: Router, private translate: TranslateService) {
+  }
+
+  ngOnInit() {
+  }
+
 }

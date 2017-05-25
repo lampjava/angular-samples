@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: './layout/layout.module#LayoutModule',
-    canActivate: [AuthGuard]
+    canActivate: [ AuthGuard ]
   },
   { path: 'login', loadChildren: './views/contents/login/login.module#LoginModule' },
   { path: 'sign-up', loadChildren: './views/contents/signup/signup.module#SignupModule' },
@@ -16,7 +16,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule ]
 })
 export class AppRoutingModule { }

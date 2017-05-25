@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
-import { AppConstants } from '../core/constants';
+import { AppConstants } from './shared/constants';
 
 @Injectable()
 export class AuthGuard implements CanActivate {

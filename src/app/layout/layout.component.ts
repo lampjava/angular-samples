@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { StringUtils, ObjectUtils } from '../../core/utils';
-import { AppConstants } from '../../core/constants';
+import { StringUtils, ObjectUtils } from '../shared/utils';
+import { AppConstants } from '../shared/constants';
 
 @Component({
     selector: 'app-layout',
-    templateUrl: './layout.component.html'
+    templateUrl: './layout.component.html',
+    styles: [ './layout.component.css' ]
 })
 export class LayoutComponent implements OnInit {
     isHideFooter = false;

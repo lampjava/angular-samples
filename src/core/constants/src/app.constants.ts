@@ -1,15 +1,11 @@
-export class AppConstants {
+export const AppConstants = {
 
-  // App Name
-  public static appName = 'LightSaber';
+  appName: 'LightSaber',
+  appAuthKey: 'isLoggedin',
 
-  // Define Parameter Names
-  public static parameter: object = {
-    hideHeader: 'isHideHeader',
-    hideFooter: 'isHideFooter',
-    hideAside: 'isHideAside',
-    hideSideNav: 'isHideSideNav',
-    onlyContent: 'isOnlyContent'
-  };
+  hideHeader: 'isHideHeader',
+  hideFooter: 'isHideFooter',
+  hideSideBar: 'isHideSideBar',
+  onlyContent: 'isOnlyContent'
 
 }

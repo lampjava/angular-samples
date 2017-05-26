@@ -1,7 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule, Http } from '@angular/http';
 import { NgModule } from '@angular/core';
+import { Location, LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpModule, Http } from '@angular/http';
+
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -15,9 +17,6 @@ export function HttpLoaderFactory (http: Http) {
 }
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -31,7 +30,14 @@ export function HttpLoaderFactory (http: Http) {
       }
     })
   ],
-  providers: [AuthGuard],
-  bootstrap: [AppComponent]
+  declarations: [
+    AppComponent
+  ],
+  providers: [
+    AuthGuard,
+    Location,
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

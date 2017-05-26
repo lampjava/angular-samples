@@ -6,7 +6,6 @@ import { AppConstants } from './shared/constants';
 export class AuthGuard implements CanActivate {
 
     constructor(private router: Router) {
-
     }
 
     canActivate() {
@@ -14,7 +13,7 @@ export class AuthGuard implements CanActivate {
             return true;
         }
 
-        this.router.navigate(['/login']);
+        this.router.navigate(['/index/login']);
         return false;
     }
 

@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 declare const $: any;
 
 @Component({
-    selector: 'app-layout-dashboard',
+    selector: 'app-contents-dashboard',
     templateUrl: './dashboard.component.html',
     styles: [ './dashboard.component.css' ]
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent {
+
     constructor() {
     }
 
-    ngOnInit() {
-    }
 }

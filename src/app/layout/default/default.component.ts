@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { StringUtils, ObjectUtils } from '../shared/utils';
-import { AppConstants } from '../shared/constants';
+import { StringUtils, ObjectUtils } from '../../shared/utils';
+import { AppConstants } from '../../shared/constants';
 
 @Component({
-    selector: 'app-layout',
-    templateUrl: './layout.component.html',
-    styles: [ './layout.component.css' ]
+    selector: 'app-layout-default',
+    templateUrl: './default.component.html',
+    styles: [ './default.component.css' ]
 })
-export class LayoutComponent implements OnInit {
+export class DefaultComponent implements OnInit {
     isHideFooter = false;
     isHideHeader = false;
     isHideSideBar = false;

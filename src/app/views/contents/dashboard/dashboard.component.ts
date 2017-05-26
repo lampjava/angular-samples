@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 declare const $: any;
 
 @Component({
-    selector: 'app-dashboard',
+    selector: 'app-layout-dashboard',
     templateUrl: './dashboard.component.html',
     styles: [ './dashboard.component.css' ]
 })

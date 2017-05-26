@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LayoutComponent } from './layout.component';
+import { DefaultComponent } from './default.component';
 
 const routes: Routes = [
     {
-        path: '', component: LayoutComponent,
+        path: '', component: DefaultComponent,
         children: [
-          { path: 'dashboard', loadChildren: '../views/contents/dashboard/dashboard.module#DashboardModule' }
-        //     { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
+          { path: 'dashboard', loadChildren: '../../views/contents/dashboard/dashboard.module#DashboardModule' },
+          { path: 'error', loadChildren: '../../views/error/notfound/notfound.module#NotFoundModule' }
         //     { path: 'tables', loadChildren: './tables/tables.module#TablesModule' },
         //     { path: 'forms', loadChildren: './form/form.module#FormModule' },
         //     { path: 'bs-element', loadChildren: './bs-element/bs-element.module#BsElementModule' },
@@ -22,4 +22,4 @@ const routes: Routes = [
     imports: [ RouterModule.forChild(routes) ],
     exports: [ RouterModule ]
 })
-export class LayoutRoutingModule { }
+export class DefaultRoutingModule { }

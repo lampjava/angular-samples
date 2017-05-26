@@ -5,12 +5,12 @@ import { AuthGuard } from './app-auth.guard';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: './layout/layout.module#LayoutModule',
+    loadChildren: './layout/default/default.module#DefaultModule',
     canActivate: [ AuthGuard ]
   },
   { path: 'login', loadChildren: './views/contents/login/login.module#LoginModule' },
   { path: 'sign-up', loadChildren: './views/contents/signup/signup.module#SignupModule' },
-  { path: 'guide', loadChildren: './views/guide/main/guidemain.module#GuideMainModule' },
+  { path: 'guide', loadChildren: './layout/guide/guide.module#GuideModule' },
   { path: 'not-found', loadChildren: './views/error/notfound/notfound.module#NotFoundModule' },
   { path: '**', redirectTo: '/not-found', pathMatch: 'full' }
 ];

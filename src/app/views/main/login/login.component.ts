@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+
 import { AppConstants } from '../../../shared/constants';
 import { AppServices } from '../../../shared/services';
+import { User } from '../../../shared/models';
+
+declare const $: any;
 
 @Component({
   selector: 'app-main-login',
@@ -11,18 +16,22 @@ import { AppServices } from '../../../shared/services';
 })
 export class LoginComponent implements OnInit {
 
-  pageTitle = 'Login';
+  pageTitle: any = 'Login';
+  nextPage: string = '/contents';
+  user: object = new User();
+  loginForm: FormGroup;
 
-  constructor(public router: Router, private appServices: AppServices) {
+  constructor(public router: Router, private appServices: AppServices, private fb: FormBuilder) {
     this.appServices.setTitle(this.pageTitle);
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
-  onLogin() {
+  onLogin(): void {
+    console.log(this.user.toString());
     localStorage.setItem(AppConstants.appAuthKey, 'true');
-    this.router.navigate(['/contents']);
+    this.router.navigate([this.nextPage]);
   }
 
 }

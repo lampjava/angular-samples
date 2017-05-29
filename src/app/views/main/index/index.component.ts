@@ -9,7 +9,7 @@ import { AppServices } from '../../../shared/services';
 })
 export class IndexComponent {
 
-  pageTitle = 'Main';
+  pageTitle: any = 'Main';
 
   constructor(private appServices: AppServices) {
      this.appServices.setTitle(this.pageTitle);

@@ -12,10 +12,10 @@ export class FooterComponent implements OnInit {
   constructor(public router: Router, private translate: TranslateService) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
-  setTranslate(language: string) {
+  setTranslate(language: string): void {
     this.translate.use(language);
   }
 }

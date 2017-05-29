@@ -5,7 +5,7 @@ import $ from 'jquery/dist/jquery';
 // @ObjectUtils class
 export class ObjectUtils {
 
-  public static jsonToSerialize (target: any, sp: string, type: string) {
+  public static jsonToSerialize (target: any, sp: string, type: string): string {
     let sSerial = '';
     $.each(target, function(k, v) {
       switch (type) {
@@ -23,7 +23,7 @@ export class ObjectUtils {
     return sSerial.substr(0, (sSerial.length - 1));
   }
 
-  public static serializeToJson (target: any, k1: string, k2: string) {
+  public static serializeToJson (target: any, k1: string, k2: string): any {
     const json = {};
     if (StringUtils.isNotEmpty(target)) {
       if (target.indexOf(k1) > -1) {
@@ -44,7 +44,7 @@ export class ObjectUtils {
     return json;
   }
 
-  public static compareJson (oriJson: any, targetJson: any) {
+  public static compareJson (oriJson: any, targetJson: any): any {
     // 비교 결과 JSON (다른 것 또는 oriJson에 없는 targetJson의 값이 들어감)
     const rJson = {};
 
@@ -67,13 +67,17 @@ export class ObjectUtils {
     return rJson;
   }
 
-  public static compareArray (arr1: Array<any>, arr2: Array<any>) {
+  public static compareArray (arr1: Array<any>, arr2: Array<any>): any {
     arr1 = arr1.sort();
     arr2 = arr2.sort();
     return (JSON.stringify(arr1) === JSON.stringify(arr2));
   }
 
-  public static getDocumentInfo (key?: string) {
+  public static objectToJson (obj: any): any {
+    return JSON.stringify(obj);
+  }
+
+  public static getDocumentInfo (key?: string): any {
     const doc = document;
     const loc = doc.location;
     const info = {

@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(public router: Router, private translate: TranslateService) { }
 
-  ngOnInit() {
+  ngOnInit(): void{
     $('.main.menu').visibility({
       type: 'fixed'
     });
@@ -23,11 +23,11 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  onLoggedout() {
+  onLoggedout(): void {
     localStorage.removeItem('isLoggedin');
   }
 
-  changeLang(language: string) {
+  changeLang(language: string): void {
     this.translate.use(language);
   }
 

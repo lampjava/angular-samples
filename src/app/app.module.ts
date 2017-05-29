@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Location, LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -19,9 +18,8 @@ export function HttpLoaderFactory (http: Http) {
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule,
     AppRoutingModule,
+    HttpModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

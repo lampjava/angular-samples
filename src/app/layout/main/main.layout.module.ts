@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { MainLayoutRoutingModule } from './main-routing.layout.module';
@@ -11,6 +13,9 @@ import { IndexComponent, LoginComponent, SignupComponent } from '../../views/mai
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpModule,
     TranslateModule,
     MainLayoutRoutingModule
   ],

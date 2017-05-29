@@ -11,10 +11,10 @@ export class HeaderComponent implements OnInit {
 
   constructor(public router: Router) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
-  onLoggedout() {
+  onLoggedout(): void {
     localStorage.removeItem('isLoggedin');
   }
 

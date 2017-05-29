@@ -9,7 +9,7 @@ import { AppServices } from '../../../shared/services';
 })
 export class DashboardComponent {
 
-  pageTitle = 'Dashboard';
+  pageTitle: any = 'Dashboard';
 
   constructor(private appServices: AppServices) {
     this.appServices.setTitle(this.pageTitle);

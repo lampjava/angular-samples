@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
-declare const $: any;
+import { AppServices } from '../../../shared/services';
 
 @Component({
-    selector: 'app-contents-dashboard',
-    templateUrl: './dashboard.component.html',
-    styles: [ './dashboard.component.css' ]
+  selector: 'app-contents-dashboard',
+  templateUrl: './dashboard.component.html',
+  styles: [ './dashboard.component.css' ],
+  providers: [ AppServices ]
 })
 export class DashboardComponent {
 
-    constructor() {
-    }
+  pageTitle = 'Dashboard';
+
+  constructor(private appServices: AppServices) {
+    this.appServices.setTitle(this.pageTitle);
+  }
 
 }

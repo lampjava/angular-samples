@@ -1,12 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AppServices } from '../../../shared/services';
 
 @Component({
-    selector: 'app-main-signup',
-    templateUrl: './signup.component.html'
+  selector: 'app-main-signup',
+  templateUrl: './signup.component.html',
+  providers: [ AppServices ]
 })
 export class SignupComponent implements OnInit {
 
-    constructor() { }
+  pageTitle = 'Sign Up';
 
-    ngOnInit() { }
+  constructor(public router: Router, private appServices: AppServices) {
+    this.appServices.setTitle(this.pageTitle);
+  }
+
+  ngOnInit() { }
 }

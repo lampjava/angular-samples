@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
-import { AppConstants } from '../../constants';
+import { AuthConstants } from '../../constants';
+import { StorageUtils } from '../../utils';
 
 @Injectable()
 export class LoginAuth implements CanActivate {
@@ -9,7 +10,7 @@ export class LoginAuth implements CanActivate {
   }
 
   canActivate() {
-    if (localStorage.getItem(AppConstants.appAuthKey)) {
+    if (StorageUtils.getItem(AuthConstants.authKey)) {
       return true;
     }
 

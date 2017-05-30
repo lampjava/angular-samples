@@ -1,4 +1,9 @@
 {
-  "login-title": "영어 로그인",
-  "guide-title": "영어 가이드"
+  "login-title": "Login",
+  "guide-title": "Guide for Development",
+
+  "required-email": "Please enter a e-mail.",
+  "required-password": "Please enter a password.",
+  "minlength-password": "minimum {{min}} characters.",
+  "maxlength-password": "maximum {{max}} characters."
 }

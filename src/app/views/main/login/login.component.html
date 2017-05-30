@@ -7,21 +7,23 @@
         {{ "login-title" | translate }}
       </div>
     </h2>
-    <form class="ui large form">
+    <form class="ui large form" [formGroup]="form" (ngSubmit)="onLogin()">
       <div class="ui stacked segment">
         <div class="field">
           <div class="ui left icon input">
             <i class="user icon"></i>
-            <input type="text" name="email" placeholder="E-mail address" [(ngModel)]="user.email">
+            <input type="text" id="email" formControlName="email" placeholder="E-mail address" required [(ngModel)]="user.email">
+            <div *ngIf="formTargets.email" class="alert alert-danger">{{ formTargets.email | translate }}</div>
           </div>
         </div>
         <div class="field">
           <div class="ui left icon input">
             <i class="lock icon"></i>
-            <input type="password" name="password" placeholder="Password" [(ngModel)]="user.password">
+            <input type="password" id="password" formControlName="password" placeholder="Password" required minlength="6" maxlength="12" [(ngModel)]="user.password">
+            <div *ngIf="formTargets.password" class="alert alert-danger">{{ formTargets.password | translate:{ min: 6, max: 12 } }}</div>
           </div>
         </div>
-        <div class="ui fluid large teal submit button" (click)="onLogin()">Login</div>
+        <button type="submit" class="ui fluid large teal submit button" [disabled]="!form.valid">Login</button>
       </div>
       <div class="ui error message"></div>
     </form>

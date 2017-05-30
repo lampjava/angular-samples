@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { TranslateModule } from '@ngx-translate/core';
-
 import { HttpInterceptorModule } from 'ng-http-interceptor';
 
 import { MainLayoutRoutingModule } from './main-routing.layout.module';

@@ -1,4 +1,9 @@
 {
-  "login-title": "중국어 로그인",
-  "guide-title": "중국어 가이드"
+  "login-title": "Login (cn)",
+  "guide-title": "Guide for Development (cn)",
+
+  "required-email": "Please enter a e-mail. (cn)",
+  "required-password": "Please enter a password. (cn)",
+  "minlength-password": "minimum {{min}} characters. (cn)",
+  "maxlength-password": "maximum {{max}} characters. (cn)"
 }

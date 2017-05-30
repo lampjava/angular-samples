@@ -1,14 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-import { AppConstants } from '../../../shared/constants';
+import { AuthConstants } from '../../../shared/constants';
 import { AppServices } from '../../../shared/services';
+import { StorageUtils, ValidatorUtils } from '../../../shared/utils';
 import { User } from '../../../shared/models';
-import {Http} from '@angular/http';
-import {HttpInterceptorService} from 'ng-http-interceptor';
-
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/do';
 
 @Component({
   selector: 'app-main-login',
@@ -20,44 +17,44 @@ export class LoginComponent implements OnInit {
 
   pageTitle: any = 'Login';
   nextPage: string = '/contents';
-  user: object = new User();
+  user: User = new User();
 
-  error: any;
-  requests: Array<any>;
+  form: FormGroup;
+  formTargets: any;
 
-  text: string;
-
-  constructor(public router: Router, private appServices: AppServices, private http: Http, private httpInterceptor: HttpInterceptorService) {
+  constructor(
+    public router: Router,
+    private appServices: AppServices,
+    private fb: FormBuilder
+  ) {
     this.appServices.setTitle(this.pageTitle);
-
-    httpInterceptor.request().addInterceptor((data, method) => {
-      console.log('-------------1---------------');
-      console.log(method, data);
-      return data;
-    });
-
-    httpInterceptor.request('/my-url').addInterceptor(data => {
-      console.log('This wong get called');
-      return data;
-    });
-
-    httpInterceptor.response().addInterceptor((res, method) => {
-      console.log('-------------2---------------');
-      // console.log(this.text));
-      console.log('-------------4---------------');
-      return res.do(r => console.log(method, r));
-    });
   }
 
   ngOnInit(): void {
-    this.http.get('assets/i18n/cn.json')
-      .map(r => this.text = r.text())
-      .subscribe();
+    this.formTargets = {
+      'email': '',
+      'password': ''
+    };
+    this.setFormRuleSet();
+  }
+
+  setFormRuleSet(): void {
+    this.form = this.fb.group({
+      'email': ValidatorUtils.emailRuleSet(this.user.email),
+      'password': ValidatorUtils.passwordRuleSet(this.user.password)
+    });
+    this.form.valueChanges.subscribe(
+      data => this.formTargets = ValidatorUtils.watchValueChanged(this.form, this.formTargets, data)
+    );
+    this.formTargets = ValidatorUtils.watchValueChanged(this.form, this.formTargets);
   }
 
   onLogin(): void {
-    console.log(this.user.toString());
-    localStorage.setItem(AppConstants.appAuthKey, 'true');
+    const authValues: Array<any> = [
+      { key: AuthConstants.authorEmail, value: this.user.email },
+      { key: AuthConstants.authKey, value: AuthConstants.authValue }
+    ];
+    StorageUtils.setItems(authValues);
     this.router.navigate([this.nextPage]);
   }
 

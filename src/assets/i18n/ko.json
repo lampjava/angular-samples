@@ -1,4 +1,9 @@
 {
-  "login-title": "한국어 로그인",
-  "guide-title": "한국어 가이드"
+  "login-title": "로그인",
+  "guide-title": "개발 가이드",
+
+  "required-email": "E-mail를 입력해 주세요.",
+  "required-password": "비밀번호를 입력해 주세요.",
+  "minlength-password": "최소 {{min}}자이상 입니다.",
+  "maxlength-password": "최대 {{max}}자이하 입니다."
 }

@@ -27,6 +27,8 @@
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4",
+    "tslib": "^1.7.1",
+    "ng-http-interceptor": "^3.0.1",
     "jquery": "^3.2.1",
     "gulp": "^3.9.1",
     "semantic-ui": "^2.2.10",

@@ -5,5 +5,8 @@
 
 export const environment = {
   production: false,
-  envName: 'Local'
+  envName: 'Local',
+
+  naverClientId: 'lxvoaT9Cv8exd4_C1GfD',
+  naverClientSecret: 'Yi95poEmfg'
 };

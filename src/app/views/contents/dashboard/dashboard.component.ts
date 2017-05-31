@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { AppServices } from '../../../shared/services';
 
 @Component({
@@ -12,7 +14,10 @@ export class DashboardComponent {
   urls: any;
   pageTitle: any = 'Dashboard';
 
-  constructor(private appServices: AppServices) {
+  constructor(
+    public router: Router,
+    private appServices: AppServices
+  ) {
     this.urls = appServices.getUrls();
     appServices.setTitle(this.pageTitle);
   }

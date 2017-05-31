@@ -2,8 +2,12 @@
   "login-title": "Login",
   "guide-title": "Guide for Development",
 
+  "required-url": "Please enter a url.",
   "required-email": "Please enter a e-mail.",
   "required-password": "Please enter a password.",
+
   "minlength-password": "minimum {{min}} characters.",
-  "maxlength-password": "maximum {{max}} characters."
+  "maxlength-password": "maximum {{max}} characters.",
+
+  "invaild-url": "Please enter a valid url."
 }

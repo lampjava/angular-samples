@@ -5,5 +5,8 @@
 
 export const environment = {
   production: false,
-  envName: 'DEV'
+  envName: 'DEV',
+
+  naverClientId: '',
+  naverClientSecret: ''
 };

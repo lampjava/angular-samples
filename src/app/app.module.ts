@@ -12,7 +12,7 @@ import { LoginAuth } from './shared/authentications';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory (http: Http) {
-  return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, '/assets/i18n/', '.json'); // call to http(s)://domain:port/assets/i18n/{lang_code}.json
 }
 
 @NgModule({

@@ -1,0 +1,26 @@
+<br><br><br><br><br><br>
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui teal image header">
+      <img src="assets/images/logo.png" class="image">
+      <div class="content">
+        단축 URL 만들기
+      </div>
+    </h2>
+    <form class="ui large form" [formGroup]="form" (ngSubmit)="getShorty()">
+      <div class="ui stacked segment">
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" id="url" formControlName="url" placeholder="URL" required #url>
+            <div *ngIf="formTargets.url" class="alert alert-danger">{{ formTargets.url | translate }}</div>
+          </div>
+        </div>
+        <div class="field" *ngIf="shorltyUrl">
+          <div class="ui left icon input">{{ shorltyUrl }}</div>
+        </div>
+        <button type="submit" class="ui fluid large teal submit button" [disabled]="!form.valid">Get!</button>
+      </div>
+    </form>
+  </div>
+</div>

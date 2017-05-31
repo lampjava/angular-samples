@@ -3,6 +3,10 @@ import { Validators } from '@angular/forms';
 export class ValidatorUtils {
 
   public static validationMessages: any = {
+    'url': {
+      'required': 'required-url',
+      'pattern' : 'invaild-url'
+    },
     'email': {
       'required': 'required-email'
     },
@@ -35,6 +39,14 @@ export class ValidatorUtils {
   public static emailRuleSet(target: any): any {
     return [target, [
           Validators.required
+        ]
+      ];
+  }
+
+  public static urlRuleSet(target: any): any {
+    return [target, [
+          Validators.required,
+          Validators.pattern(/((http|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w��-�롢뀖-�ｊ�-��\;\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?)/g)
         ]
       ];
   }

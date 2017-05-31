@@ -2,8 +2,12 @@
   "login-title": "Login (cn)",
   "guide-title": "Guide for Development (cn)",
 
+  "required-url": "Please enter a url. (cn)",
   "required-email": "Please enter a e-mail. (cn)",
   "required-password": "Please enter a password. (cn)",
+
   "minlength-password": "minimum {{min}} characters. (cn)",
-  "maxlength-password": "maximum {{max}} characters. (cn)"
+  "maxlength-password": "maximum {{max}} characters. (cn)",
+
+  "invaild-url": "Please enter a valid url. (cn)"
 }

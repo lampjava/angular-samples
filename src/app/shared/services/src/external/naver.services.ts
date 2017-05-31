@@ -10,7 +10,6 @@ import 'rxjs/add/operator/do';
 @Injectable()
 export class NaverServices {
 
-  baseUrl: string;
   headers: Headers;
 
   constructor(private http: Http, private httpInterceptor: HttpInterceptorService) {
@@ -34,7 +33,10 @@ export class NaverServices {
 
   getShortlyUrl(url: string): any {
     const shortlyApi = 'https://openapi.naver.com/v1/util/shorturl?url=' + url;
-    return this.http.post(shortlyApi, null, {headers: this.headers}).toPromise().then(res => res).catch(this.errorHandle);
+    return this.http.post(shortlyApi, null, {headers: this.headers})
+                      .toPromise()
+                      .then(res => res)
+                      .catch(this.errorHandle);
   }
 
   private errorHandle(error: any): any {

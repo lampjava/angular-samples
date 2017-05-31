@@ -9,10 +9,12 @@ import { AppServices } from '../../../shared/services';
 })
 export class IndexComponent {
 
+  urls: any;
   pageTitle: any = 'Guide';
 
   constructor(private appServices: AppServices) {
-    this.appServices.setTitle(this.pageTitle);
+    this.urls = appServices.getUrls();
+    appServices.setTitle(this.pageTitle);
   }
 
 }

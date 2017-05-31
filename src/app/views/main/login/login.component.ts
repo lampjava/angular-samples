@@ -15,8 +15,8 @@ import { User } from '../../../shared/models';
 })
 export class LoginComponent implements OnInit {
 
+  urls: any;
   pageTitle: any = 'Login';
-  nextPage: string = '/contents';
   user: User = new User();
 
   form: FormGroup;
@@ -27,7 +27,8 @@ export class LoginComponent implements OnInit {
     private appServices: AppServices,
     private fb: FormBuilder
   ) {
-    this.appServices.setTitle(this.pageTitle);
+    this.urls = appServices.getUrls();
+    appServices.setTitle(this.pageTitle);
   }
 
   ngOnInit(): void {
@@ -55,7 +56,7 @@ export class LoginComponent implements OnInit {
       { key: AuthConstants.authKey, value: AuthConstants.authValue }
     ];
     StorageUtils.setItems(authValues);
-    this.router.navigate([this.nextPage]);
+    this.router.navigate([this.urls.contents.index]);
   }
 
 }

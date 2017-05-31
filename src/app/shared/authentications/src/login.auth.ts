@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
-import { AuthConstants } from '../../constants';
+import { AuthConstants, UrlConstants } from '../../constants';
 import { StorageUtils } from '../../utils';
 
 @Injectable()
@@ -14,7 +14,7 @@ export class LoginAuth implements CanActivate {
       return true;
     }
 
-    this.router.navigate(['/index/login']);
+    this.router.navigate([UrlConstants.index.login]);
     return false;
   }
 

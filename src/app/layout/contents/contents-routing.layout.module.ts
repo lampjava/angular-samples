@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ContentsLayoutComponent } from './contents.layout.component';
+import { UrlConstants } from '../../shared/constants';
 
+import { ContentsLayoutComponent } from './contents.layout.component';
 import { DashboardComponent } from '../../views/contents';
 
 const routes: Routes = [

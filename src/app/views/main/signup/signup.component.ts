@@ -9,10 +9,12 @@ import { AppServices } from '../../../shared/services';
 })
 export class SignupComponent implements OnInit {
 
+  urls: any;
   pageTitle: any = 'Sign Up';
 
   constructor(public router: Router, private appServices: AppServices) {
-    this.appServices.setTitle(this.pageTitle);
+    this.urls = appServices.getUrls();
+    appServices.setTitle(this.pageTitle);
   }
 
   ngOnInit(): void { }

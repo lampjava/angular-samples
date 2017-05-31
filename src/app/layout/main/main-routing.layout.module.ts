@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MainLayoutComponent } from './main.layout.component';
+import { UrlConstants } from '../../shared/constants';
 
+import { MainLayoutComponent } from './main.layout.component';
 import { IndexComponent, LoginComponent, SignupComponent } from '../../views/main';
 
 const routes: Routes = [

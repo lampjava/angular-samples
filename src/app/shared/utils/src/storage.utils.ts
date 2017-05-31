@@ -21,4 +21,14 @@ export class StorageUtils {
     }
     return items;
   }
+
+  public static removeItem(key: string): void {
+    localStorage.removeItem(key);
+  }
+
+  public static removeItems(keys: Array<any>): void {
+    for (const index in keys) {
+      StorageUtils.removeItem(keys[index]);
+    }
+  }
 }

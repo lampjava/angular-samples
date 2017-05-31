@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ErrorLayoutComponent } from './error.layout.component';
+import { UrlConstants } from '../../shared/constants';
 
+import { ErrorLayoutComponent } from './error.layout.component';
 import { NotFoundComponent } from '../../views/error';
 
 const routes: Routes = [

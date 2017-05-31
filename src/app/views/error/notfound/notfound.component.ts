@@ -9,10 +9,12 @@ import { AppServices } from '../../../shared/services';
 })
 export class NotFoundComponent {
 
+  urls: any;
   pageTitle: any = 'Not Found';
 
   constructor(private appServices: AppServices) {
-    this.appServices.setTitle(this.pageTitle);
+    this.urls = appServices.getUrls();
+    appServices.setTitle(this.pageTitle);
   }
 
 }

@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { GuideLayoutComponent } from './guide.layout.component';
+import { UrlConstants } from '../../shared/constants';
 
+import { GuideLayoutComponent } from './guide.layout.component';
 import { IndexComponent } from '../../views/guide';
 
 const routes: Routes = [

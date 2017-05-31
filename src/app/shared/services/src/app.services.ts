@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { AppConstants } from '../../constants';
+import { AppConstants, UrlConstants } from '../../constants';
 import { StringUtils } from '../../utils';
 
 @Injectable()
 export class AppServices {
-
-  private Stringutils: any;
 
   constructor (private titleService: Title) { }
 
@@ -30,6 +28,10 @@ export class AppServices {
 
   public getTitle(): string {
     return this.titleService.getTitle();
+  }
+
+  public getUrls(): any {
+    return UrlConstants;
   }
 
 }

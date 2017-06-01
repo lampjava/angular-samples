@@ -43,7 +43,7 @@ export class ShortlyComponent implements OnInit {
   }
 
   getShorty(): void {
-    this.shorltyUrl = 'No Access-Control-Allow-Origin header is present on the requested resource. Origin http://localhost:4200 is therefore not allowed access. The response had HTTP status code 405.';
+    this.shorltyUrl = 'http://me2.do/5HC4WnIO';
     this.naverServices.getShortlyUrl(this.url.nativeElement.value).then(res => {
       console.log(res);
     });

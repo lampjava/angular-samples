@@ -29,6 +29,7 @@
     "zone.js": "^0.8.4",
     "tslib": "^1.7.1",
     "ng-http-interceptor": "^3.0.1",
+    "replace-in-file": "^2.5.0",
     "jquery": "^3.2.1",
     "gulp": "^3.9.1",
     "semantic-ui": "^2.2.10",

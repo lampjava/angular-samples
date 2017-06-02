@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, Renderer2 } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 import { NaverServices } from '../../shared/services';
 import { ValidatorUtils } from '../../shared/utils';
@@ -20,8 +20,7 @@ export class ShortlyComponent implements OnInit {
 
   constructor(
     private naverServices: NaverServices,
-    private fb: FormBuilder,
-    private renderer: Renderer2,
+    private fb: FormBuilder
   ) {
   }
 

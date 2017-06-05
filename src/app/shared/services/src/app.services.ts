@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { AppConstants, UrlConstants } from '../../constants';
+import { AppConstants, UrlConstants, LangConstants } from '../../constants';
 import { StringUtils } from '../../utils';
 
 @Injectable()
@@ -30,8 +30,11 @@ export class AppServices {
     return this.titleService.getTitle();
   }
 
-  public getUrls(): any {
+  public getUrls(): object {
     return UrlConstants;
   }
 
+  public getLangs(): object {
+    return LangConstants;
+  }
 }

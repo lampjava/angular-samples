@@ -1,5 +1,6 @@
 import { ElementRef } from '@angular/core';
 import { StringUtils } from './string.utils';
+import { LangConstants } from '../../constants';
 
 export class ElementValidatorUtils {
 
@@ -15,7 +16,7 @@ export class ElementValidatorUtils {
   };
 
   private static executeRegExp(pattern: string, value: any): boolean {
-    return !eval(pattern).test(value);
+    return !eval(pattern).test(value); // 반환값이 true 일 때 메세지가 지정되므로, 실행결과를 반대로 반환한다.
   }
 
   private static isSelection(type: string): boolean {
@@ -47,10 +48,18 @@ export class ElementValidatorUtils {
   }
 
   private static validRadio(element: any): boolean {
+    /**
+     * 차후 라디오 그룹에 대한 Validation 구현할 것!
+     * 현재는 interface 만 정의
+     */
     return false;
   }
 
   private static validSelect(element: any): boolean {
+    /**
+     * 차후 <select>에 대한 Validation 구현할 것!
+     * 현재는 interface 만 정의
+     */
     return false;
   }
 
@@ -101,7 +110,7 @@ export class ElementValidatorUtils {
   public static validator(elements: Array<ElementRef>): any {
     const validMessage: object = {};
 
-    elementloop:
+    elementFor:
     for (const element of elements) {
       const that = element.nativeElement;
       const id = that.id;
@@ -109,27 +118,27 @@ export class ElementValidatorUtils {
       for (const attr of that.attributes) {
         if (this.checkRequired(attr, that)) {
           validMessage[id] = 'error-required';
-          continue elementloop;
+          continue elementFor;
         }
         if (this.validNumber(that)) {
           validMessage[id] = 'error-number';
-          continue elementloop;
+          continue elementFor;
         }
         if (this.validEmail(that)) {
           validMessage[id] = 'error-email';
-          continue elementloop;
+          continue elementFor;
         }
         if (this.checkMinimum(attr, value)) {
-          validMessage[id] = 'minlength-password';
-          continue elementloop;
+          validMessage[id] = 'error-minlength';
+          continue elementFor;
         }
         if (this.checkMaximum(attr, value)) {
-          validMessage[id] = 'maxlength-password';
-          continue elementloop;
+          validMessage[id] = 'error-maxlength';
+          continue elementFor;
         }
         if (this.checkPattern(attr, value)) {
           validMessage[id] = 'error-pattern';
-          continue elementloop;
+          continue elementFor;
         }
       }
     }

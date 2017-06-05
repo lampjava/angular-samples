@@ -9,15 +9,5 @@
   "minlength-password": "최소 {{min}}자이상 입니다.",
   "maxlength-password": "최대 {{max}}자이하 입니다.",
 
-  "invaild-url": "올바른 URL을 입력하여 주세요."  "login-title": "로그인",
-  "guide-title": "개발 가이드",
-
-  "required-url": "URL를 입력해 주세요.",
-  "required-email": "E-mail를 입력해 주세요.",
-  "required-password": "비밀번호를 입력해 주세요.",
-
-  "minlength-password": "최소 {{min}}자이상 입니다.",
-  "maxlength-password": "최대 {{max}}자이하 입니다.",
-
   "invaild-url": "올바른 URL을 입력하여 주세요."
 }

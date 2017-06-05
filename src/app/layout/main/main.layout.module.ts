@@ -9,7 +9,7 @@ import { MainLayoutRoutingModule } from './main-routing.layout.module';
 import { MainLayoutComponent } from './main.layout.component';
 
 import { HeaderComponent, FooterComponent } from './components';
-import { IndexComponent, LoginComponent, SignupComponent } from '../../views/main';
+import { IndexComponent, LoginComponent, SignupComponent, ValidationComponent } from '../../views/main';
 
 @NgModule({
   imports: [
@@ -27,7 +27,8 @@ import { IndexComponent, LoginComponent, SignupComponent } from '../../views/mai
     FooterComponent,
     IndexComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ValidationComponent
   ]
 })
 export class MainLayoutModule { }

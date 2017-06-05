@@ -1,8 +1,8 @@
 import { Validators } from '@angular/forms';
 
-export class ValidatorUtils {
+export class FormValidatorUtils {
 
-  public static validationMessages: any = {
+  public static messages: any = {
     'url': {
       'required': 'required-url',
       'pattern' : 'invaild-url'
@@ -27,7 +27,7 @@ export class ValidatorUtils {
       targets[field] = '';
       const control = form.get(field);
       if (control && !control.valid) {
-        const messages = ValidatorUtils.validationMessages[field];
+        const messages = FormValidatorUtils.messages[field];
         for (const key in control.errors) {
           targets[field] += messages[key];
         }

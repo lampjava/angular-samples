@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 import { NaverServices } from '../../shared/services';
-import { ValidatorUtils } from '../../shared/utils';
+import { FormValidatorUtils } from '../../shared/utils';
 
 @Component({
   selector: 'app-component-shortly',
@@ -33,12 +33,12 @@ export class ShortlyComponent implements OnInit {
 
   setFormRuleSet(): void {
     this.form = this.fb.group({
-      'url': ValidatorUtils.urlRuleSet(this.url.nativeElement.value)
+      'url': FormValidatorUtils.urlRuleSet(this.url.nativeElement.value)
     });
     this.form.valueChanges.subscribe(
-      data => this.formTargets = ValidatorUtils.watchValueChanged(this.form, this.formTargets, data)
+      data => this.formTargets = FormValidatorUtils.watchValueChanged(this.form, this.formTargets, data)
     );
-    this.formTargets = ValidatorUtils.watchValueChanged(this.form, this.formTargets);
+    this.formTargets = FormValidatorUtils.watchValueChanged(this.form, this.formTargets);
   }
 
   getShorty(): void {

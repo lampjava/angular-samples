@@ -4,7 +4,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 
 import { AuthConstants } from '../../../shared/constants';
 import { AppServices } from '../../../shared/services';
-import { StorageUtils, ValidatorUtils } from '../../../shared/utils';
+import { StorageUtils, FormValidatorUtils } from '../../../shared/utils';
 import { User } from '../../../shared/models';
 
 @Component({
@@ -41,13 +41,13 @@ export class LoginComponent implements OnInit {
 
   setFormRuleSet(): void {
     this.form = this.fb.group({
-      'email': ValidatorUtils.emailRuleSet(this.user.email),
-      'password': ValidatorUtils.passwordRuleSet(this.user.password)
+      'email': FormValidatorUtils.emailRuleSet(this.user.email),
+      'password': FormValidatorUtils.passwordRuleSet(this.user.password)
     });
     this.form.valueChanges.subscribe(
-      data => this.formTargets = ValidatorUtils.watchValueChanged(this.form, this.formTargets, data)
+      data => this.formTargets = FormValidatorUtils.watchValueChanged(this.form, this.formTargets, data)
     );
-    this.formTargets = ValidatorUtils.watchValueChanged(this.form, this.formTargets);
+    this.formTargets = FormValidatorUtils.watchValueChanged(this.form, this.formTargets);
   }
 
   onLogin(): void {

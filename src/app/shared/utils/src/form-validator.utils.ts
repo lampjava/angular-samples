@@ -1,7 +1,8 @@
 import { Validators } from '@angular/forms';
+import { ValidatorUtils } from './validator.utils';
 import { LangConstants } from '../../constants';
 
-export class FormValidatorUtils {
+export class FormValidatorUtils extends ValidatorUtils  {
 
   public static messages: any = {
     'url': {
@@ -17,8 +18,6 @@ export class FormValidatorUtils {
       'maxlength': 'maxlength-password'
     }
   };
-
-  constructor() {}
 
   public static watchValueChanged(form?: any, targets?: any, data?: any): any {
     if (!form) {

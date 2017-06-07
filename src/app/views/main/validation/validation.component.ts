@@ -20,8 +20,7 @@ export class ValidationComponent implements OnInit {
   @ViewChild('agree') agree: ElementRef;
 
   constructor(
-    public router: Router,
-    private appServices: AppServices
+    public router: Router, private appServices: AppServices
   ) {
     this.urls = appServices.getUrls();
     appServices.setTitle(this.pageTitle);

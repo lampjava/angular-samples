@@ -73,10 +73,6 @@ export class ObjectUtils {
     return (JSON.stringify(arr1) === JSON.stringify(arr2));
   }
 
-  public static objectToJson (obj: any): any {
-    return JSON.stringify(obj);
-  }
-
   public static getDocumentInfo (key?: string): any {
     const doc = document;
     const loc = doc.location;
@@ -98,6 +94,21 @@ export class ObjectUtils {
       return info[key];
     }
     return info;
+  }
+
+  private static stringifyReplacer(key: any, value?: any) : any {
+    if (value === null) {
+      return undefined;
+    }
+    return value;
+  }
+
+  public static objectToJson (obj: any, includenull?: boolean): string {
+    if (includenull === true) {
+      return JSON.stringify(obj);
+    } else {
+      return JSON.stringify(obj, this.stringifyReplacer);
+    }
   }
 
 }

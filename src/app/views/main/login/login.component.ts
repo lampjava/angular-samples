@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   urls: any;
   pageTitle: any = 'Login';
-  user: User = new User();
+  user: User = new User({email: 'jinwoo.yuk@bespinglobal.com', additional: { birthday: '19820207'} });
 
   form: FormGroup;
   formTargets: any;

@@ -17,13 +17,17 @@ Follow below index.
 Run `ng serve`.
 
 Options.
+
  -o : Run project to open automatically default browser.
+ 
  --env={options} : Choose to run enviornment. defined by `.angular-cli.json`
 
-## Build
+## How to Build
 
 Run `ng build`.
 
 Options.
+
  --prod : Build for production.
+ 
  --env={options} : Choose to build enviornment. defined by `.angular-cli.json`

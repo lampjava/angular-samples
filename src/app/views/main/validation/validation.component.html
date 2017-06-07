@@ -6,23 +6,23 @@
         Validation Check II
       </div>
     </h2>
-    <div class="ui stacked segment">ng serve
+    <div class="ui stacked segment">
       <div class="field">
         <div class="ui left icon input">
           <i class="user icon"></i>
-          <input type="email" id="email" placeholder="E-mail address" required #email>
+          <input type="email" id="email" placeholder="E-mail address" required #email (change)="watchValue($event)">
         </div>
       </div>
       <div class="field">
         <div class="ui left icon input">
           <i class="lock icon"></i>
-          <input type="password" id="password" placeholder="Password" required minlength="6" maxlength="12" #password>
+          <input type="password" id="password" placeholder="Password" required minlength="6" maxlength="12" #password (change)="watchValue($event)">
         </div>
       </div>
       <div class="field">
         <div class="ui left icon input">
           <i class="user icon"></i>
-          <input type="checkbox" id="agree" placeholder="Agree Term" required #agree>
+          <input type="checkbox" id="agree" placeholder="Agree Term" required #agree (change)="watchValue($event)">
         </div>
       </div>
       <button type="button" class="ui fluid large teal submit button" (click)="onCheck()">Check</button>

@@ -35,4 +35,7 @@ export class ValidationComponent implements OnInit {
     this.validMessage = ElementValidatorUtils.validator(targets);
   }
 
+  watchValue(event): void {
+    this.onCheck();
+  }
 }

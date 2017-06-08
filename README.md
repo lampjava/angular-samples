@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## How to install
 
-Follow below index.
+Follow below index. Or http://localhost:4200/#/guide
 
 1) `Clone` or `Download`.
 2) Download `NodeJs`, and install.

@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
     this.urls = appServices.getUrls();
   }
 
-  ngOnInit(): void{
+  private eventBinder(): void {
     $('.main.menu').visibility({
       type: 'fixed'
     });
@@ -29,12 +29,9 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  onLoggedout(): void {
-    localStorage.removeItem('isLoggedin');
+  ngOnInit(): void {
+    this.eventBinder();
   }
 
-  changeLang(language: string): void {
-    this.translate.use(language);
-  }
 
 }

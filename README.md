@@ -21,6 +21,8 @@ Options.
  -o : Run project to open automatically default browser.
  
  --env={options} : Choose to run enviornment. defined by `.angular-cli.json`
+ 
+ --host IP or hostname : Server to the specified host 
 
 ## How to Build
 

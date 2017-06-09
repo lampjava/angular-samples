@@ -4,12 +4,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { TranslateModule } from '@ngx-translate/core';
 import { HttpInterceptorModule } from 'ng-http-interceptor';
+import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload/ng2-file-upload';
 
 import { MainLayoutRoutingModule } from './main-routing.layout.module';
 import { MainLayoutComponent } from './main.layout.component';
 
 import { HeaderComponent, FooterComponent } from './components';
-import { IndexComponent, LoginComponent, SignupComponent, ValidationComponent } from '../../views/main';
+import { IndexComponent, LoginComponent, SignupComponent, ValidationComponent, FileUploadComponent } from '../../views/main';
 
 @NgModule({
   imports: [
@@ -22,13 +23,16 @@ import { IndexComponent, LoginComponent, SignupComponent, ValidationComponent } 
     HttpInterceptorModule
   ],
   declarations: [
+    FileSelectDirective,
+    FileDropDirective,
     MainLayoutComponent,
     HeaderComponent,
     FooterComponent,
     IndexComponent,
     LoginComponent,
     SignupComponent,
-    ValidationComponent
+    ValidationComponent,
+    FileUploadComponent
   ]
 })
 export class MainLayoutModule { }

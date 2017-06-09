@@ -8,5 +8,7 @@ export const environment = {
   envName: 'QA',
 
   naverClientId: '',
-  naverClientSecret: ''
+  naverClientSecret: '',
+
+  uploadApi: ''
 };

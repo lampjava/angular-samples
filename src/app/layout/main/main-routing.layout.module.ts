@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { UrlConstants } from '../../shared/constants';
 
 import { MainLayoutComponent } from './main.layout.component';
-import { IndexComponent, LoginComponent, SignupComponent, ValidationComponent } from '../../views/main';
+import { IndexComponent, LoginComponent, SignupComponent, ValidationComponent, FileUploadComponent } from '../../views/main';
 
 const routes: Routes = [
   {
@@ -12,7 +12,8 @@ const routes: Routes = [
       { path: '', component: IndexComponent },
       { path: 'login', component: LoginComponent },
       { path: 'sign-up', component: SignupComponent },
-      { path: 'validation', component: ValidationComponent }
+      { path: 'validation', component: ValidationComponent },
+      { path: 'fileupload', component: FileUploadComponent }
     ]
   }
 ];

@@ -8,5 +8,8 @@ export const environment = {
   envName: 'Local',
 
   naverClientId: '',
-  naverClientSecret: ''
+  naverClientSecret: '',
+
+  //uploadApi: 'https://evening-anchorage-3159.herokuapp.com/api/'
+  uploadApi: 'http://localhost:8080/upload-files'
 };

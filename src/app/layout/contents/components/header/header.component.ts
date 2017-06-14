@@ -9,7 +9,7 @@ declare const $: any;
 @Component({
   selector: 'app-contents-header',
   templateUrl: './header.component.html',
-  styles: [ './header.component.css' ],
+  styleUrls: [ './header.component.css' ],
   providers: [ AppServices ]
 })
 export class HeaderComponent implements OnInit {

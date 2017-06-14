@@ -4,7 +4,7 @@ import { AppServices } from '../../../shared/services';
 @Component({
   selector: 'app-error-500',
   templateUrl: './server.component.html',
-  styles: [ './server.component.css' ],
+  styleUrls: [ './server.component.css' ],
   providers: [ AppServices ]
 })
 export class ServerComponent {

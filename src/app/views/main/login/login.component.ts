@@ -11,7 +11,7 @@ import { User } from '../../../shared/models';
 @Component({
   selector: 'app-main-login',
   templateUrl: './login.component.html',
-  styles: [ './login.component.css' ],
+  styleUrls: [ './login.component.css' ],
   providers: [ AppServices, CookieService ]
 })
 export class LoginComponent implements OnInit {
@@ -43,9 +43,9 @@ export class LoginComponent implements OnInit {
       userValues = {
         'email': rememberEmail
       };
+      this.remember.nativeElement.checked = true;
     }
     this.user = new User(userValues);
-    this.remember.nativeElement.checked = true;
 
     this.formTargets = {
       'email': '',

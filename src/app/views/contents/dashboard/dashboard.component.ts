@@ -6,7 +6,7 @@ import { AppServices } from '../../../shared/services';
 @Component({
   selector: 'app-contents-dashboard',
   templateUrl: './dashboard.component.html',
-  styles: [ './dashboard.component.css' ],
+  styleUrls: [ './dashboard.component.css' ],
   providers: [ AppServices ]
 })
 export class DashboardComponent {

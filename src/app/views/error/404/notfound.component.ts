@@ -4,7 +4,7 @@ import { AppServices } from '../../../shared/services';
 @Component({
   selector: 'app-error-404',
   templateUrl: './notfound.component.html',
-  styles: [ './notfound.component.css' ],
+  styleUrls: [ './notfound.component.css' ],
   providers: [ AppServices ]
 })
 export class NotFoundComponent {

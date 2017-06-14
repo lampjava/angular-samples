@@ -4,7 +4,7 @@ import { AppServices } from '../../../shared/services';
 @Component({
   selector: 'app-main-index',
   templateUrl: './index.component.html',
-  styles: [ './index.component.css' ],
+  styleUrls: [ './index.component.css' ],
   providers: [ AppServices ]
 })
 export class IndexComponent implements OnInit {

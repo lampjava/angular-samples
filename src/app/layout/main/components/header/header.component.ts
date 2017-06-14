@@ -8,7 +8,7 @@ import {StringUtils} from "../../../../shared/utils/src/string.utils";
 @Component({
   selector: 'app-main-header',
   templateUrl: './header.component.html',
-  styles: [ './header.component.css' ],
+  styleUrls: [ './header.component.css' ],
   providers: [ AppServices ]
 })
 export class HeaderComponent implements OnInit {

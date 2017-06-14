@@ -8,15 +8,12 @@ export const UrlConstants = {
       fileuplaod: '/index/fileupload'
     } ,
 
-    guide: {
-      index: '/guide'
-    },
-
    contents: {
       index: '/contents'
    },
 
    error: {
-      notfound: '/error/not-found'
+      notfound: '/error/404',
+      server: '/error/500'
    }
 };

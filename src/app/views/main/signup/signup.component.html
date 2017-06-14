@@ -1,1 +1,48 @@
-Sign-Up
+<header class="intro-header" style="background-image: url('assets/images/main/about-bg.jpg')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+          <h1>{{ "signup-title" | translate }}</h1>
+          <hr class="small">
+          <span class="subheading">{{ "signup-subtitle" | translate }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-12 col-md-offset-1">
+        <div class="row control-group">
+          <div class="form-group col-xs-12 floating-label-form-group controls">
+            <label>Email Address</label>
+            <input type="email" id="email" placeholder="E-mail address" required #email (change)="watchValue($event)">
+            <div class="alert alert-danger" *ngIf="validMessage['email']">{{ validMessage['email'] | translate:{ name: 'E-mail' } }}</div>
+          </div>
+        </div>
+        <div class="row control-group">
+          <div class="form-group col-xs-12 floating-label-form-group controls">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Password" required minlength="6" maxlength="12" #password (change)="watchValue($event)">
+            <div class="alert alert-danger" *ngIf="validMessage['password']">{{ validMessage['password'] | translate:{ min: 6, max: 12 } }}</div>
+          </div>
+        </div>
+        <div class="row control-group">
+          <div class="form-group col-xs-12 floating-label-form-group controls">
+            <label>Agreement</label>
+            <input type="checkbox" id="agree" placeholder="Agree Term" required #agree (change)="watchValue($event)"> {{ "signup-agree" | translate }}
+            <div class="alert alert-danger" *ngIf="validMessage['agree']">{{ validMessage['agree'] | translate:{ name: 'Agree' } }}</div>
+          </div>
+        </div>
+        <br>
+        <div id="success"></div>
+        <div class="row">
+          <div class="form-group col-xs-12">
+            <button type="button" class="btn btn-default" (click)="onCheck()">{{ "signup-title" | translate }}</button>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

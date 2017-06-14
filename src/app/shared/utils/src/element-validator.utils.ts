@@ -14,27 +14,27 @@ export class ElementValidatorUtils extends ValidatorUtils {
       const value = that.value;
       for (const attr of that.attributes) {
         if (this.checkRequired(attr, that)) {
-          validMessage[id] = 'error-required';
+          validMessage[id] = 'validation-error-required';
           continue elementFor;
         }
         if (this.validNumber(that)) {
-          validMessage[id] = 'error-number';
+          validMessage[id] = 'validation-error-number';
           continue elementFor;
         }
         if (this.validEmail(that)) {
-          validMessage[id] = 'error-email';
+          validMessage[id] = 'validation-error-email';
           continue elementFor;
         }
         if (this.checkMinimum(attr, value)) {
-          validMessage[id] = 'error-minlength';
+          validMessage[id] = 'validation-error-minlength';
           continue elementFor;
         }
         if (this.checkMaximum(attr, value)) {
-          validMessage[id] = 'error-maxlength';
+          validMessage[id] = 'validation-error-maxlength';
           continue elementFor;
         }
         if (this.checkPattern(attr, value)) {
-          validMessage[id] = 'error-pattern';
+          validMessage[id] = 'validation-error-pattern';
           continue elementFor;
         }
       }

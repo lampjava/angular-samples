@@ -1,31 +1,45 @@
-<!-- Page Contents -->
-<div class="pusher">
-  <div class="ui inverted vertical masthead center aligned segment">
-
-    <div class="ui text container">
-      <h1 class="ui inverted header">
-        Imagine-a-Company
-      </h1>
-      <h2>Do whatever you want when you want to.</h2>
-      <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
-    </div>
-
-  </div>
-
-  <div class="ui vertical stripe segment">
-    <div class="ui center aligned stackable grid container">
-      <div class="row">
-        <div class="eight wide column">
-          <h3 class="ui header">We Help Companies and Companions</h3>
-          <p>We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs...through pure data analytics.</p>
-          <h3 class="ui header">We Make Bananas That Can Dance</h3>
-          <p>Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="center aligned column">
-          <a class="ui huge button">Check Them Out</a>
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<header class="intro-header" style="background-image: url('assets/images/main/home-bg.jpg')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="site-heading">
+          <h1>{{ "main-title" | translate }}</h1>
+          <hr class="small">
+          <span class="subheading">{{ "main-subtitle" | translate }}</span>
         </div>
       </div>
     </div>
   </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+      <div class="post-preview" *ngFor="let post of posts">
+        <a href="post.html">
+          <h2 class="post-title">
+            {{ post.title }}
+          </h2>
+          <h3 class="post-subtitle">
+            {{ post.subtitle }}
+          </h3>
+        </a>
+        <p class="post-meta">{{ 'writer' | translate }} {{ post.writer }}</p>
+        <hr />
+      </div>
+
+      <!-- Pager -->
+      <ul class="pager">
+        <li class="next">
+          <a href="#">{{ "Older Posts" |  translate }} &rarr;</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr>

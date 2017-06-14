@@ -1,13 +1,50 @@
 {
+  "BrandName": "BespinGlobal",
+
+  "menu-home": "메인으로",
+  "menu-login": "로그인",
+  "menu-logout": "로그아웃",
+  "menu-signup": "회원가입",
+  "menu-fileupload": "파일업로드",
+  "menu-send-main-admin": "관리자 문의",
+
+  "main-title": "메인",
+  "main-subtitle": "샘플 메인 페이지 템플릿",
+
   "login-title": "로그인",
-  "guide-title": "개발 가이드",
+  "login-subtitle": "Angular4 Reactive Form Validation 샘플",
+  "login-remember-email": "E-mail 기억하기?",
 
-  "required-url": "URL를 입력해 주세요.",
-  "required-email": "E-mail를 입력해 주세요.",
-  "required-password": "비밀번호를 입력해 주세요.",
+  "signup-title": "회원가입",
+  "signup-subtitle": "<form>을 사용하지 않는 요소에 대한 유효성 검사 샘플",
+  "signup-agree": "가입 동의",
 
-  "minlength-password": "최소 {{min}}자이상 입니다.",
-  "maxlength-password": "최대 {{max}}자이하 입니다.",
+  "fileupload-title": "파일업로드",
+  "fileupload-subtitle": "ng2-fileupload 모듈 샘플 페이지",
 
-  "invaild-url": "올바른 URL을 입력하여 주세요."
+  "writer": "작성자",
+  "Older Posts": "다른 글들",
+
+  "copyright": "Copyright ⓒ BespinGlobal",
+
+  "error-common-guide": "이런!",
+  "error-404-text1": "죄송합니다. 요청하신 페이지에 대해 응답할 수 없습니다.",
+  "error-404-text2": "페이지를 찾을 수 없습니다.",
+  "error-500-text1": "죄송합니다. 요청하신 페이지에 대해 응답할 수 없습니다.",
+  "error-500-text2": "시스템에 장애가 발생하였습니다.",
+
+  "button-login": "로그인",
+  "label-email": "E-mail Address",
+  "label-password": "Password",
+  "validation-empty-email": "E-mail을 입력하세요.",
+  "validation-empty-password": "비밀번호를 입력하세요.",
+  "validation-minlength-password": "비밀번호는 최소 {{min}}자 입니다.",
+  "validation-maxlength-password": "비밀번호는 최대 {{max}}자 입니다.",
+
+  "validation-error-required": "{{name}}은 (는) 필수 항목입니다.",
+  "validation-error-number": "숫자형식이 아닙니다.",
+  "validation-error-email": "올바른 E-mail 형식이 아닙니다.",
+  "validation-error-minlength": "최소 {{min}}자 입니다.",
+  "validation-error-maxlength": "최대 {{max}}자 입니다.",
+  "validation-error-pattern": "{{pattern-name}}이 아닙니다."
 }

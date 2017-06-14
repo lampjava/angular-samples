@@ -10,7 +10,7 @@ import { MainLayoutRoutingModule } from './main-routing.layout.module';
 import { MainLayoutComponent } from './main.layout.component';
 
 import { HeaderComponent, FooterComponent } from './components';
-import { IndexComponent, LoginComponent, SignupComponent, ValidationComponent, FileUploadComponent } from '../../views/main';
+import { IndexComponent, LoginComponent, SignupComponent, FileUploadComponent } from '../../views/main';
 
 @NgModule({
   imports: [
@@ -31,7 +31,6 @@ import { IndexComponent, LoginComponent, SignupComponent, ValidationComponent, F
     IndexComponent,
     LoginComponent,
     SignupComponent,
-    ValidationComponent,
     FileUploadComponent
   ]
 })

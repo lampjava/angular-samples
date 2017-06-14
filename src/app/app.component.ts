@@ -9,10 +9,10 @@ export class AppComponent {
 
   constructor(private translate: TranslateService) {
     translate.addLangs(['ko', 'en', 'cn']);
-    translate.setDefaultLang('ko');
+    translate.setDefaultLang('en');
 
     const browserLang = translate.getBrowserLang();
-    translate.use(browserLang.match(/ko|en|cn/) ? browserLang : 'ko');
+    translate.use(browserLang.match(/ko|en|cn/) ? browserLang : 'en');
   }
 
 }

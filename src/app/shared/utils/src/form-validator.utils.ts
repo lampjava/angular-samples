@@ -10,12 +10,12 @@ export class FormValidatorUtils extends ValidatorUtils  {
       'pattern' : 'invaild-url'
     },
     'email': {
-      'required': 'required-email'
+      'required': 'validation-empty-email'
     },
     'password': {
-      'required': 'required-password',
-      'minlength': 'minlength-password',
-      'maxlength': 'maxlength-password'
+      'required': 'validation-empty-password',
+      'minlength': 'validation-minlength-password',
+      'maxlength': 'validation-maxlength-password'
     }
   };
 

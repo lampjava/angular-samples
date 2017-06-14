@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="error-template">
+      <h1>{{ "error-common-guide" | translate }}</h1>
+      <h2>{{ "error-500-text1" | translate }}</h2>
+      <div class="error-details">
+        {{ "error-500-text2" | translate }}<br>
+      </div>
+      <div class="error-actions">
+        <a [routerLink]="[urls.index.index]" class="btn btn-primary">
+          <i class="icon-home icon-white"></i> {{ "menu-home" | translate }} </a>
+        <a href="mailto:admin@bespinglobal.com" class="btn btn-default">
+          <i class="icon-envelope"></i> {{ "menu-send-main-admin" | translate }} </a>
+      </div>
+    </div>
+  </div>
+</div>

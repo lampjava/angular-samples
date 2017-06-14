@@ -1,13 +1,50 @@
 {
-  "login-title": "Login (cn)",
-  "guide-title": "Guide for Development (cn)",
+  "BrandName": "BespinGlobal",
 
-  "required-url": "Please enter a url. (cn)",
-  "required-email": "Please enter a e-mail. (cn)",
-  "required-password": "Please enter a password. (cn)",
+  "menu-home": "HOME",
+  "menu-login": "LOGIN",
+  "menu-logout": "LOGOUT",
+  "menu-signup": "SIGN-UP",
+  "menu-fileupload": "FILE UPLOAD",
+  "menu-send-main-admin": "Contact support",
 
-  "minlength-password": "minimum {{min}} characters. (cn)",
-  "maxlength-password": "maximum {{max}} characters. (cn)",
+  "main-title": "Main",
+  "main-subtitle": "Sample Template for MainPage",
 
-  "invaild-url": "Please enter a valid url. (cn)"
+  "login-title": "Login",
+  "login-subtitle": "Angular4 Reactive Form Validation Sample",
+  "login-remember-email": "Remember E-mail?",
+
+  "signup-title": "Sign-Up",
+  "signup-subtitle": "Validation Sample for not use <form>",
+  "signup-agree": "sign up ok",
+
+  "fileupload-title": "File-Upload",
+  "fileupload-subtitle": "ng2-fileupload Module Sample Page",
+
+  "writer": "Posted by",
+  "Older Posts": "OLDER POSTS",
+
+  "copyright": "Copyright ⓒ BespinGlobal",
+
+  "error-common-guide": "Oops!",
+  "error-404-text1": "404 Not Found!",
+  "error-404-text2": "Sorry, an error has occured. Requested page not found.",
+  "error-500-text1": "500 Internal Server Error.",
+  "error-500-text2": "Sorry, an error has occured.",
+
+  "button-login": "Login",
+  "label-email": "E-mail Address",
+  "label-password": "Password",
+  "validation-empty-email": "Please enter a E-mail.",
+  "validation-empty-password": "Please enter a password.",
+  "validation-minlength-password": "Password minimum {{min}} character",
+  "validation-maxlength-password": "Password maximum {{min}} character",
+
+  "validation-error-required": "{{name}} is required",
+  "validation-error-number": "Invalid number format.",
+  "validation-error-email": "Invalid E-mail format.",
+  "validation-error-minlength": "Minimum {{min}} character",
+  "validation-error-maxlength": "Maximum {{min}} character",
+  "validation-error-pattern": "Invalid {{pattern-name}} format."
 }

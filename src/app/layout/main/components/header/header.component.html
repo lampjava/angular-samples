@@ -1,17 +1,36 @@
-<div class="ui large top fixed hidden menu">
-  <div class="ui container">
-    <a class="active item" [routerLink]="[urls.index.index]">Home</a>
-    <a class="item" [routerLink]="[urls.guide.index]">Guide</a>
-    <a class="item" [routerLink]="[urls.contents.index]">Contents</a>
-    <a class="item" [routerLink]="[urls.index.validation]">Validation II</a>
-    <a class="item" [routerLink]="[urls.index.fileuplaod]">File Upload</a>
-    <div class="right menu">
-      <div class="item">
-        <a class="ui button" [routerLink]="[urls.index.login]">{{ "login-title" | translate }}</a>
-      </div>
-      <div class="item">
-        <a class="ui primary button" [routerLink]="[urls.index.signup]">Sign Up</a>
-      </div>
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+  <div class="container-fluid">
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        Menu <i class="fa fa-bars"></i>
+      </button>
+      <a class="navbar-brand" [routerLink]="[urls.index.index]">{{ "BrandName" | translate }}</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li *ngIf="!isLogined">
+          <a [routerLink]="[urls.index.login]">{{ "menu-login" | translate }}</a>
+        </li>
+        <li *ngIf="isLogined">
+          <a (click)="onLoggedout()" style="cursor:pointer">{{ "menu-logout" | translate }}</a>
+        </li>
+        <li *ngIf="!isLogined">
+          <a [routerLink]="[urls.index.signup]">{{ "menu-signup" | translate }}</a>
+        </li>
+        <li>
+          <a [routerLink]="[urls.index.fileuplaod]">{{ "menu-fileupload" | translate }}</a>
+        </li>
+        <li>
+          <a [routerLink]="[urls.error.notfound]">404</a>
+        </li>
+        <li>
+          <a [routerLink]="[urls.error.server]">500</a>
+        </li>
+      </ul>
     </div>
   </div>
-</div>
+
+</nav>

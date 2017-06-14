@@ -2,6 +2,7 @@ export const AuthConstants = {
 
   authKey: 'isLoggedin',
   authValue: 'true',
-  authorEmail: 'authorEmail'
+  authorEmail: 'authorEmail',
 
+  cookieKey: 'LoginEmail'
 }

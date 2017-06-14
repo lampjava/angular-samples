@@ -1,6 +1,19 @@
-<br><br><br><br><br><br><br><br>
+<header class="intro-header" style="background-image: url('assets/images/main/post-bg.jpg')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>{{ "fileupload-title" | translate }} </h1>
+          <h2 class="subheading">{{ "fileupload-subtitle" | translate }}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 
-<div class="container">
+<!-- Post Content -->
+<article>
+  <div class="container">
 
   <div class="navbar navbar-default">
     <div class="navbar-header">
@@ -13,17 +26,7 @@
       <h3>Select files</h3>
 
       <div ng2FileDrop [ngClass]="{'nv-file-over': hasBaseDropZoneOver}" (fileOver)="fileOverBase($event)" [uploader]="uploader" class="well my-drop-zone" style="min-height:100px;"> Drag n Drop </div>
-
-      <br>
-      <br>
-      <br>
-
       Multiple : <input type="file" ng2FileSelect [uploader]="uploader" multiple  /><br/>
-
-      <br>
-      <br>
-      <br>
-
       Single : <input type="file" ng2FileSelect [uploader]="uploader" />
     </div>
 

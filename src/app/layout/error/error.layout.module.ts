@@ -5,7 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ErrorLayoutRoutingModule } from './error-routing.layout.module';
 import { ErrorLayoutComponent } from './error.layout.component';
 
-import { NotFoundComponent } from '../../views/error';
+import { NotFoundComponent, ServerComponent } from '../../views/error';
 
 @NgModule({
   imports: [
@@ -15,7 +15,8 @@ import { NotFoundComponent } from '../../views/error';
   ],
   declarations: [
     ErrorLayoutComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ServerComponent
   ]
 })
 export class ErrorLayoutModule { }

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AppServices } from '../../../shared/services';
 
 @Component({
-  selector: 'app-error-notfound',
+  selector: 'app-error-404',
   templateUrl: './notfound.component.html',
   styles: [ './notfound.component.css' ],
   providers: [ AppServices ]

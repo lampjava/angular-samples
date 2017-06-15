@@ -25,17 +25,20 @@
     "@ngx-translate/core": "^6.0.1",
     "@ngx-translate/http-loader": "^0.0.3",
     "ng2-file-upload": "^1.2.1",
+    "ng-http-interceptor": "^3.0.1",
     "angular2-cookie": "^1.2.6",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4",
     "tslib": "^1.7.1",
-    "ng-http-interceptor": "^3.0.1",
     "replace-in-file": "^2.5.0",
     "jquery": "^3.2.1",
     "gulp": "^3.9.1",
     "font-awesome": "^4.7.0",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "ngx-bootstrap": "^1.7.1",
+    "html5shiv": "^3.7.3",
+    "respond.min.js": "^1.4.2"
   },
   "devDependencies": {
     "@angular/cli": "^1.1.0",

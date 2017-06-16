@@ -5,18 +5,18 @@ import { NaverServices } from '../../shared/services';
 import { FormValidatorUtils } from '../../shared/utils';
 
 @Component({
-  selector: 'app-component-shortly',
-  templateUrl: './shortly.component.html',
+  selector: 'app-component-shorturl',
+  templateUrl: './shorturl.component.html',
   providers: [ NaverServices ]
 })
 
-export class ShortlyComponent implements OnInit {
+export class ShortUrlComponent implements OnInit {
 
   form: FormGroup;
   formTargets: any;
 
   @ViewChild('url') url: ElementRef;
-  shorltyUrl: string;
+  shortUrl: string;
 
   constructor(
     private naverServices: NaverServices,
@@ -42,7 +42,7 @@ export class ShortlyComponent implements OnInit {
   }
 
   getShorty(): void {
-    this.shorltyUrl = 'http://me2.do/5HC4WnIO';
+    this.shortUrl = 'http://me2.do/5HC4WnIO';
     this.naverServices.getShortlyUrl(this.url.nativeElement.value).then(res => {
       console.log(res);
     });

@@ -1,1 +1,1 @@
-export * from './shortly/shortly.component';
+export * from './shorturl/shorturl.component';

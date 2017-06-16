@@ -16,8 +16,8 @@
             <div *ngIf="formTargets.url" class="alert alert-danger">{{ formTargets.url | translate }}</div>
           </div>
         </div>
-        <div class="field" *ngIf="shorltyUrl">
-          <div class="ui left icon input">{{ shorltyUrl }}</div>
+        <div class="field" *ngIf="shortUrl">
+          <div class="ui left icon input">{{ shortUrl }}</div>
         </div>
         <button type="submit" class="ui fluid large teal submit button" [disabled]="!form.valid">Get!</button>
       </div>

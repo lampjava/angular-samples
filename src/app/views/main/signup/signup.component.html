@@ -33,7 +33,7 @@
           <div class="form-group col-xs-12 floating-label-form-group controls">
             <label>Agreement</label>
             <input type="checkbox" id="agree" placeholder="Agree Term" required #agree (change)="watchValue($event)"> {{ "signup-agree" | translate }}
-            <div class="alert alert-danger" *ngIf="validMessage['agree']">{{ validMessage['agree'] | translate:{ name: 'Agree' } }}</div>
+            <div class="alert alert-danger" *ngIf="validMessage['agree']">{{ validMessage['agree'] | translate:{ name: 'agree' | translate } }}</div>
           </div>
         </div>
         <br>

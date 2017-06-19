@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { TranslateModule } from '@ngx-translate/core';
-import { HttpInterceptorModule } from 'ng-http-interceptor';
+import { LayoutCommonModule } from '../layout-common.module';
+import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload/ng2-file-upload';
 
 import { ContentsLayoutRoutingModule } from './contents-routing.layout.module';
 import { ContentsLayoutComponent } from './contents.layout.component';
@@ -14,15 +11,12 @@ import { DashboardComponent } from '../../views/contents';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpModule,
-    HttpInterceptorModule,
-    TranslateModule,
+    LayoutCommonModule,
     ContentsLayoutRoutingModule
   ],
   declarations: [
+    FileSelectDirective,
+    FileDropDirective,
     ContentsLayoutComponent,
     HeaderComponent,
     FooterComponent,

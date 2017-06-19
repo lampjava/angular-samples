@@ -1,0 +1,57 @@
+<header class="intro-header" style="background-image: url('assets/images/main/post-bg.jpg')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+          <h1>{{ "ui-title" | translate }}</h1>
+          <hr class="small">
+          <span class="subheading">{{ "ui-subtitle" | translate }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+
+    <alert type="info">
+      <strong>API Guide</strong> <a href="http://valor-software.com/ngx-bootstrap/#/" target="_ngx_bootstrap">http://valor-software.com/ngx-bootstrap/#/</a>
+    </alert>
+
+    <alert type="success">
+    <strong>Well done!</strong> You successfully read this important alert message.
+    </alert>
+    <alert type="info">
+      <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+    </alert>
+    <alert type="warning">
+      <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    </alert>
+    <alert type="danger">
+      <strong>Oh snap!</strong> Change a few things up and try submitting again.
+    </alert>
+
+
+    <button type="button" class="btn btn-primary" (click)="staticModal.show()">Static modal</button>
+
+    <div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
+         tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title pull-left">Static modal</h4>
+            <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            This is static modal, backdrop click will not close it.
+            Click <b>&times;</b> to close modal.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -7,6 +7,7 @@
   "menu-signup": "SIGN-UP",
   "menu-fileupload": "FILE UPLOAD",
   "menu-send-main-admin": "Contact support",
+  "menu-ui": "UI Samples",
 
   "main-title": "Main",
   "main-subtitle": "Sample Template for MainPage",
@@ -18,6 +19,9 @@
   "signup-title": "Sign-Up",
   "signup-subtitle": "Validation Sample for not use <form>",
   "signup-agree": "sign up ok",
+
+  "ui-title": "UI Samples",
+  "ui-subtitle": "ngx-bootstrap Sample Page",
 
   "fileupload-title": "File-Upload",
   "fileupload-subtitle": "ng2-fileupload Module Sample Page",

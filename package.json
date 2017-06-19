@@ -27,6 +27,7 @@
     "ng2-file-upload": "^1.2.1",
     "ng-http-interceptor": "^3.0.1",
     "angular2-cookie": "^1.2.6",
+    "angular2-logger": "^0.6.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4",

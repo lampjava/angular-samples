@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+
 import { AppConstants, UrlConstants, LangConstants } from '../../constants';
 import { StringUtils } from '../../utils';
 
 @Injectable()
 export class AppServices {
 
-  constructor (private titleService: Title) { }
+  constructor (
+    private titleService: Title
+  ) { }
 
   public setTitle(obj: string | Array<string>): void {
     const titleSeperator = ' | ';

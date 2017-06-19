@@ -1,25 +1,17 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { TranslateModule } from '@ngx-translate/core';
-import { HttpInterceptorModule } from 'ng-http-interceptor';
+import { LayoutCommonModule } from '../layout-common.module';
 import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload/ng2-file-upload';
+
 import { MainLayoutRoutingModule } from './main-routing.layout.module';
 import { MainLayoutComponent } from './main.layout.component';
 
 import { HeaderComponent, FooterComponent } from './components';
-import { IndexComponent, LoginComponent, SignupComponent, FileUploadComponent } from '../../views/main';
+import { IndexComponent, LoginComponent, SignupComponent, FileUploadComponent, UIComponent } from '../../views/main';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpModule,
-    TranslateModule,
-    MainLayoutRoutingModule,
-    HttpInterceptorModule
+    LayoutCommonModule,
+    MainLayoutRoutingModule
   ],
   declarations: [
     FileSelectDirective,
@@ -30,7 +22,8 @@ import { IndexComponent, LoginComponent, SignupComponent, FileUploadComponent } 
     IndexComponent,
     LoginComponent,
     SignupComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    UIComponent
   ]
 })
 export class MainLayoutModule { }

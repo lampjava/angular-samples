@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
-import { LayoutCommonModule } from '../layout-common.module';
-import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload/ng2-file-upload';
+import { LayoutCommonModule } from '../modules/layout-common.module';
 
 import { ContentsLayoutRoutingModule } from './contents-routing.layout.module';
 import { ContentsLayoutComponent } from './contents.layout.component';
@@ -15,8 +14,6 @@ import { DashboardComponent } from '../../views/contents';
     ContentsLayoutRoutingModule
   ],
   declarations: [
-    FileSelectDirective,
-    FileDropDirective,
     ContentsLayoutComponent,
     HeaderComponent,
     FooterComponent,

@@ -10,10 +10,7 @@ export class ModeComponent implements OnInit {
 
   urls: any;
   pageTitle: any = 'Mode';
-
-  public totalItems: number = 64;
-  public currentPage: number = 4;
-  public smallnumPages: number = 0;
+  mode: string = 'view';
 
   constructor(private appServices: AppServices) {
     this.urls = appServices.getUrls();
@@ -22,6 +19,14 @@ export class ModeComponent implements OnInit {
 
   ngOnInit(): void {
 
+  }
+
+  public setMode(): void {
+    if (this.mode === 'view') {
+      this.mode = 'edit';
+    } else if (this.mode === 'edit') {
+      this.mode = 'view';
+    }
   }
 
 }

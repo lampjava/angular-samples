@@ -8,7 +8,7 @@ import { NgxBootstrapModule } from './extends/ngxbootstrap.module';
 
 import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload/ng2-file-upload';
 
-import { CommonComponents } from '../../components/components.define';
+import { CommonComponents } from '../../components/common.component.define';
 
 @NgModule({
   imports: [

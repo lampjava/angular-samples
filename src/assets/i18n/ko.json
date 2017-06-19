@@ -8,6 +8,7 @@
   "menu-fileupload": "파일업로드",
   "menu-send-main-admin": "관리자 문의",
   "menu-ui": "UI 예제",
+  "menu-mode": "Mode 테스트",
 
   "main-title": "메인",
   "main-subtitle": "샘플 메인 페이지 템플릿",
@@ -22,6 +23,9 @@
 
   "ui-title": "UI 샘플",
   "ui-subtitle": "ngx-bootstrap 샘플 페이지",
+
+  "mode-title": "Mode Test 샘플",
+  "mode-subtitle": "Mode Test 샘플 페이지",
 
   "fileupload-title": "파일업로드",
   "fileupload-subtitle": "ng2-fileupload 모듈 샘플 페이지",

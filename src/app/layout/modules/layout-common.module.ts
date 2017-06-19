@@ -4,8 +4,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { TranslateModule } from '@ngx-translate/core';
 import { HttpInterceptorModule } from 'ng-http-interceptor';
-import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload/ng2-file-upload';
 import { NgxBootstrapModule } from './extends/ngxbootstrap.module';
+
+import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload/ng2-file-upload';
+
+import { CommonComponents } from '../../components/components.define';
 
 @NgModule({
   imports: [
@@ -26,11 +29,13 @@ import { NgxBootstrapModule } from './extends/ngxbootstrap.module';
     HttpInterceptorModule,
     NgxBootstrapModule,
     FileSelectDirective,
-    FileDropDirective
+    FileDropDirective,
+    CommonComponents
   ],
   declarations: [
     FileSelectDirective,
-    FileDropDirective
+    FileDropDirective,
+    CommonComponents
   ]
 })
 export class LayoutCommonModule { }

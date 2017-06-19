@@ -5,7 +5,6 @@ import { ContentsLayoutRoutingModule } from './contents-routing.layout.module';
 import { ContentsLayoutComponent } from './contents.layout.component';
 
 import { HeaderComponent, FooterComponent } from './components';
-import { ShortUrlComponent } from '../../components';
 import { DashboardComponent } from '../../views/contents';
 
 @NgModule({
@@ -17,8 +16,7 @@ import { DashboardComponent } from '../../views/contents';
     ContentsLayoutComponent,
     HeaderComponent,
     FooterComponent,
-    DashboardComponent,
-    ShortUrlComponent
+    DashboardComponent
   ]
 })
 export class ContentsLayoutModule { }

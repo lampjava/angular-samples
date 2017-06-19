@@ -5,7 +5,7 @@ import { MainLayoutRoutingModule } from './main-routing.layout.module';
 import { MainLayoutComponent } from './main.layout.component';
 
 import { HeaderComponent, FooterComponent } from './components';
-import { IndexComponent, LoginComponent, SignupComponent, FileUploadComponent, UIComponent } from '../../views/main';
+import { IndexComponent, LoginComponent, SignupComponent, FileUploadComponent, UIComponent, ModeComponent } from '../../views/main';
 
 @NgModule({
   imports: [
@@ -20,7 +20,8 @@ import { IndexComponent, LoginComponent, SignupComponent, FileUploadComponent, U
     LoginComponent,
     SignupComponent,
     FileUploadComponent,
-    UIComponent
+    UIComponent,
+    ModeComponent
   ]
 })
 export class MainLayoutModule { }

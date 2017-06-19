@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { UrlConstants } from '../../shared/constants';
 
 import { MainLayoutComponent } from './main.layout.component';
-import { IndexComponent, LoginComponent, SignupComponent, FileUploadComponent, UIComponent } from '../../views/main';
+import { IndexComponent, LoginComponent, SignupComponent, FileUploadComponent, UIComponent, ModeComponent } from '../../views/main';
 
 const routes: Routes = [
   {
@@ -13,7 +13,8 @@ const routes: Routes = [
       { path: 'login', component: LoginComponent },
       { path: 'sign-up', component: SignupComponent },
       { path: 'fileupload', component: FileUploadComponent },
-      { path: 'ui', component: UIComponent }
+      { path: 'ui', component: UIComponent },
+      { path: 'mode', component: ModeComponent }
     ]
   }
 ];

@@ -18,18 +18,15 @@
     <alert type="info">
       <strong>API Guide</strong> <a href="http://valor-software.com/ngx-bootstrap/#/" target="_ngx_bootstrap">http://valor-software.com/ngx-bootstrap/#/</a>
     </alert>
+    <alert type="danger">
+      <strong>Lisence</strong> Code licensed under MIT license conditions, docs CC BY 3.0
+    </alert>
 
     <alert type="success">
     <strong>Well done!</strong> You successfully read this important alert message.
     </alert>
-    <alert type="info">
-      <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-    </alert>
     <alert type="warning">
       <strong>Warning!</strong> Better check yourself, you're not looking too good.
-    </alert>
-    <alert type="danger">
-      <strong>Oh snap!</strong> Change a few things up and try submitting again.
     </alert>
 
 
@@ -52,6 +49,28 @@
         </div>
       </div>
     </div>
+
+    <br>
+    <br>
+
+    <pagination [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+    <br>
+
+    <pagination [boundaryLinks]="true" [totalItems]="totalItems" [(ngModel)]="currentPage" class="pagination-sm"
+                previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
+    <br>
+
+    <pagination [directionLinks]="false" [boundaryLinks]="true" [totalItems]="totalItems"
+                [(ngModel)]="currentPage"></pagination>
+    <br>
+
+    <pagination [directionLinks]="false" [totalItems]="totalItems" [(ngModel)]="currentPage"
+                (numPages)="smallnumPages = $event"></pagination>
+    <br>
+
+    <pre class="card card-block card-header">The selected page no: {{currentPage}}/{{smallnumPages}}</pre>
+
+    <button type="button" class="btn btn-info" (click)="setPage(3)">Set current page to: 3</button>
 
   </div>
 </div>

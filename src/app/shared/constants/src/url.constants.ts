@@ -6,7 +6,8 @@ export const UrlConstants = {
       signup: '/index/sign-up',
       validation: '/index/validation',
       fileuplaod: '/index/fileupload',
-      ui: '/index/ui'
+      ui: '/index/ui',
+      mode: '/index/mode'
     } ,
 
    contents: {

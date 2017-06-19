@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { AppServices } from '../../../shared/services';
 
 @Component({
-  selector: 'app-main-ui',
-  templateUrl: './ui.component.html',
+  selector: 'app-main-mode',
+  templateUrl: './mode.component.html',
   providers: [ AppServices ]
 })
-export class UIComponent implements OnInit {
+export class ModeComponent implements OnInit {
 
   urls: any;
-  pageTitle: any = 'UI';
+  pageTitle: any = 'Mode';
 
   public totalItems: number = 64;
   public currentPage: number = 4;
@@ -22,15 +22,6 @@ export class UIComponent implements OnInit {
 
   ngOnInit(): void {
 
-  }
-
-  public setPage(pageNo: number): void {
-    this.currentPage = pageNo;
-  }
-
-  public pageChanged(event: any): void {
-    console.log('Page changed to: ' + event.page);
-    console.log('Number items per page: ' + event.itemsPerPage);
   }
 
 }

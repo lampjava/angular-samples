@@ -3,3 +3,4 @@ export * from './login/login.component';
 export * from './signup/signup.component';
 export * from './fileupload/fileupload.component';
 export * from './ui/ui.component';
+export * from './mode/mode.component';

@@ -9,7 +9,8 @@ export class AppServices {
 
   constructor (
     private titleService: Title
-  ) { }
+  ) {
+  }
 
   public setTitle(obj: string | Array<string>): void {
     const titleSeperator = ' | ';
@@ -33,6 +34,10 @@ export class AppServices {
     return this.titleService.getTitle();
   }
 
+  public getAppConstant(): object {
+    return AppConstants;
+  }
+
   public getUrls(): object {
     return UrlConstants;
   }
@@ -40,4 +45,5 @@ export class AppServices {
   public getLangs(): object {
     return LangConstants;
   }
+
 }

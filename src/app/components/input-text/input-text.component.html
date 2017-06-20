@@ -1,17 +1,17 @@
-[ {{ mode }} ]
+[ input-text Component Mode : {{ mode }} ]
 
 <div *ngIf="mode === 'view'">view text1</div>
-<div *ngIf="mode === 'edit'"><input type="text" /></div>
+<div *ngIf="mode !== 'view'"><input type="text" /></div>
 
 <div *ngIf="mode === 'view'">view text2</div>
-<div *ngIf="mode === 'edit'"><input type="text" /></div>
+<div *ngIf="mode !== 'view'"><input type="text" /></div>
 
 <div *ngIf="mode === 'view'">view text3</div>
-<div *ngIf="mode === 'edit'"><input type="text" /></div>
+<div *ngIf="mode !== 'view'"><input type="text" /></div>
 
 <div *ngIf="mode === 'view'">view text4</div>
-<div *ngIf="mode === 'edit'"><input type="text" /></div>
+<div *ngIf="mode !== 'view'"><input type="text" /></div>
 
 <div *ngIf="mode === 'view'">view text5</div>
-<div *ngIf="mode === 'edit'"><input type="text" /></div>
+<div *ngIf="mode !== 'view'"><input type="text" /></div>
 

@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { AppServices } from '../../../shared/services';
+import { AppConstants } from '../../../shared/constants';
+
+import { InputTextComponent } from '../../../components';
+
 
 @Component({
   selector: 'app-main-mode',
@@ -8,25 +12,29 @@ import { AppServices } from '../../../shared/services';
 })
 export class ModeComponent implements OnInit {
 
+  appConst: any;
   urls: any;
   pageTitle: any = 'Mode';
-  mode: string = 'view';
+  mode: string;
+
+  @ViewChild(InputTextComponent)
+  private inputText: InputTextComponent;
 
   constructor(private appServices: AppServices) {
+    this.appConst = appServices.getAppConstant();
     this.urls = appServices.getUrls();
     appServices.setTitle(this.pageTitle);
+
+    this.mode = this.appConst.mode.create;
   }
 
   ngOnInit(): void {
 
   }
 
-  public setMode(): void {
-    if (this.mode === 'view') {
-      this.mode = 'edit';
-    } else if (this.mode === 'edit') {
-      this.mode = 'view';
-    }
+  public setMode(mode: string): void {
+    this.mode = mode;
+    this.inputText.setMode(this.mode);
   }
 
 }

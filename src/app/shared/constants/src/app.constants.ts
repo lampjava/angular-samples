@@ -5,6 +5,8 @@ export const AppConstants = {
   mode: {
     create: 'create',
     read: 'read',
-    update: 'update'
+    update: 'update',
+    patch: 'patch',
+    delete: 'delete'
   }
 }

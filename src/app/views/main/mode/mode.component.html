@@ -17,24 +17,31 @@
 
     <app-comp-input-text></app-comp-input-text>
 
-    mode : {{ mode }} <br>
+    [ Mode Component mode : {{ mode }} ]<br>
 
     <div *ngIf="mode === 'view'">view text1</div>
-    <div *ngIf="mode === 'edit'"><input type="text" /></div>
+    <div *ngIf="mode !== 'view'"><input type="text" /></div>
 
     <div *ngIf="mode === 'view'">view text2</div>
-    <div *ngIf="mode === 'edit'"><input type="text" /></div>
+    <div *ngIf="mode !== 'view'"><input type="text" /></div>
 
     <div *ngIf="mode === 'view'">view text3</div>
-    <div *ngIf="mode === 'edit'"><input type="text" /></div>
+    <div *ngIf="mode !== 'view'"><input type="text" /></div>
 
     <div *ngIf="mode === 'view'">view text4</div>
-    <div *ngIf="mode === 'edit'"><input type="text" /></div>
+    <div *ngIf="mode !== 'view'"><input type="text" /></div>
 
     <div *ngIf="mode === 'view'">view text5</div>
-    <div *ngIf="mode === 'edit'"><input type="text" /></div>
+    <div *ngIf="mode !== 'view'"><input type="text" /></div>
 
-    <button type="button" class="btn btn-info" (click)="setMode()">Change Mode</button>
+    <button type="button" class="btn btn-info" (click)="setMode(appConst.mode.create)">Create Mode</button>
+    <button type="button" class="btn btn-info" (click)="setMode(appConst.mode.read)">Read Mode</button>
+    <button type="button" class="btn btn-info" (click)="setMode(appConst.mode.update)">Update Mode</button>
+    <button type="button" class="btn btn-info" (click)="setMode(appConst.mode.patch)">Patch Mode</button>
+    <button type="button" class="btn btn-info" (click)="setMode(appConst.mode.delete)">Delete Mode</button>
+
+    <br>
+    cf) <a href="https://angular.io/guide/component-interaction" target="angular.io">https://angular.io/guide/component-interaction</a>
 
   </div>
 </div>

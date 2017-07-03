@@ -66,6 +66,9 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin(): void {
+
+
+
     const authValues: Array<any> = [
       { key: AuthConstants.authorEmail, value: this.user.email },
       { key: AuthConstants.authKey, value: AuthConstants.authValue }
